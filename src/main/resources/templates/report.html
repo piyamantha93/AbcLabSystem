@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report</title>
+    <link rel="stylesheet" href="report.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="container" id="reportContent">
+    <header>
+        <h1>Medical Report</h1>
+        <p>Patient Name: John Doe</p>
+        <p>Report Date: 2024-02-21</p>
+    </header>
+    <section class="patient-info">
+        <h2>Patient Information</h2>
+        <p><strong>ID:</strong> 123456789</p>
+        <p><strong>Date of Birth:</strong> 1980-04-01</p>
+        <p><strong>Gender:</strong> Male</p>
+    </section>
+    <section class="test-results">
+        <h2>Test Results</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Result</th>
+                <th>Normal Range</th>
+                <th>Unit</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Complete Blood Count</td>
+                <td>Normal</td>
+                <td>4.5-11.0</td>
+                <td>x10^9/L</td>
+                <td>2024-02-20</td>
+            </tr>
+            <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
+    <section class="doctor-notes">
+        <h2>Doctor's Notes</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+</div>
+<button id="downloadPdf">Download PDF</button>
+
+<script>
+    document.getElementById('downloadPdf').addEventListener('click', () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Optional: Use html2canvas for more accurate HTML rendering in PDF
+        // This example uses simple text extraction for demonstration purposes
+        doc.html(document.getElementById('reportContent'), {
+            callback: function (doc) {
+                doc.save('MedicalReport.pdf');
+            },
+            x: 10,
+            y: 10
+        });
+    });
+</script>
+</body>
+</html>

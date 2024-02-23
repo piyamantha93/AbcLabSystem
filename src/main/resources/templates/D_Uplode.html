@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced File Uploader</title>
+    <link rel="stylesheet" href="D_Uplode.css">
+</head>
+<body>
+<div class="uploader-container">
+    <h2>Upload Reports</h2>
+
+    <div class="form-group">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" id="patientId" name="patientId" required>
+    </div>
+    <form id="file-upload-form" class="uploader-form">
+        <input type="file" id="fileInput" name="files" multiple>
+        <div id="filePreview" class="file-preview"></div>
+        <button type="submit" class="upload-btn"> Upload</button>
+    </form>
+</div>
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const filePreview = document.getElementById('filePreview');
+
+    fileInput.addEventListener('change', function() {
+        filePreview.innerHTML = '';
+        for (let i = 0; i < this.files.length; i++) {
+            filePreview.innerHTML += `<div class="file-preview-item">${this.files[i].name}</div>`;
+        }
+    });
+</script>
+</body>
+</html>

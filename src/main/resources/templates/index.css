@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header and navigation bar */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+
+.login-button,
+.signup-button {
+    background-color: #00bcd4;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: #0097a7;
+}
+
+.banner {
+    background-image: url('image/lab2.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 190px 0;
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Style the footer section */
+footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color */
+    padding: 50px 0; /* Padding around the content */
+}
+
+/* Footer container */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Footer column */
+.footer-column {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+/* Footer column heading */
+.footer-column h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Footer links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+/* Footer social media icons */
+
+.social-media {
+    margin-top: 10px; /* Add some space between social media links and footer content */
+}
+
+.social-media a {
+    display: inline-block; /* Display links horizontally */
+    margin-right: 30px; /* Add some space between links */
+}
+
+.social-media img {
+    width: 30px; /* Adjust the width of the social media icons */
+    height: 30px; /* Adjust the height of the social media icons */
+    border-radius: 50%; /* Make the icons circular */
+    border: 1px solid #fff; /* Add a border around the icons */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Scale up the icon size on hover */
+}

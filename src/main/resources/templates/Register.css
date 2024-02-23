@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    height: 130vh;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.gender-options {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.gender-options label {
+    margin-right: 10px;
+}
+
+.form-action {
+    text-align: center;
+}
+
+.form-action button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-action button:hover {
+    background-color: #0056b3;
+}
+
+.form-action p {
+    margin-top: 15px;
+}
+
+.form-action a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-action a:hover {
+    text-decoration: underline;
+}
