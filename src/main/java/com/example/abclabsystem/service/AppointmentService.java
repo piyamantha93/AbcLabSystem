@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Transactional
 public class AppointmentService {
@@ -36,5 +39,20 @@ public class AppointmentService {
             return VarList.RSP_ERROR;
         }
 
+    }
+
+    public List<AppointmentDTO> getAllAppointments() {
+
+        List<Appointment> appointmentList = appointmentRepo.findAll();
+        List<AppointmentDTO> appointmentDTOList = new ArrayList<>();
+
+//        for (Appointment appointment : appointmentList) {
+//            AppointmentDTO appointmentDTO = modelMapper.map(appointment, AppointmentDTO.class);
+//            UserDTO userDTO = modelMapper.map(appointment.getUser(), UserDTO.class);
+//            appointmentDTO.setUserDTO(userDTO);
+//            appointmentDTOList.add(appointmentDTO);
+//        }
+
+        return appointmentDTOList;
     }
 }

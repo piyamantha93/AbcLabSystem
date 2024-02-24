@@ -9,15 +9,14 @@ import com.example.abclabsystem.util.VarList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/appointment")
 
-public class MakeAppointmentController {
+public class AppointmentController {
     @Autowired
     private AppointmentService appointmentService;
     @Autowired
@@ -54,4 +53,26 @@ public class MakeAppointmentController {
             return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/getAllAppointments")
+    public ResponseEntity getAllAppointments() {
+
+        try {
+            List<AppointmentDTO> appointmentDTOList = appointmentService.getAllAppointments();
+            responseDTO.setCode(VarList.RSP_SUCCESS);
+            responseDTO.setMessage("Success");
+            System.out.println(appointmentDTOList);
+            responseDTO.setContent(appointmentDTOList);
+            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+
+        } catch (Exception exception) {
+
+            responseDTO.setCode(VarList.RSP_ERROR);
+            responseDTO.setMessage(exception.getMessage());
+            responseDTO.setContent(null);
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }
+    }
+
 }
