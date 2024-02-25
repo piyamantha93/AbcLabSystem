@@ -22,12 +22,12 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(long id, String fName, String gender, String email, String password) {
+    public Patient(long id, String fName, String gender, String email, String encryptedpassword) {
         this.id = id;
         this.fName = fName;
         this.gender = gender;
         this.email = email;
-        this.password = password;
+        this.password = encryptedpassword;
     }
 
     public Patient(String s, String gender, String email, String encryptedPassword) {
