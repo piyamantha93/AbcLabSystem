@@ -7,6 +7,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Service
+
 public class PasswordHasher {
 
     public String hashPassword(String password) throws NoSuchAlgorithmException {

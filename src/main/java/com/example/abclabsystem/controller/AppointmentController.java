@@ -2,6 +2,7 @@ package com.example.abclabsystem.controller;
 
 
 import com.example.abclabsystem.dto.AppointmentDTO;
+import com.example.abclabsystem.dto.AppointmentVerifyDTO;
 import com.example.abclabsystem.dto.ResponseDTO;
 import com.example.abclabsystem.service.AppointmentService;
 import com.example.abclabsystem.util.VarList;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RestController
@@ -21,6 +23,7 @@ public class AppointmentController {
     private AppointmentService appointmentService;
     @Autowired
     private ResponseDTO responseDTO;
+
 
     @PostMapping (value = "/saveAppointment")
     public ResponseEntity saveAppointment(@RequestBody AppointmentDTO appointmentDTO){
@@ -72,6 +75,30 @@ public class AppointmentController {
             responseDTO.setContent(null);
             return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
 
+        }
+    }
+    @PutMapping(value = "/appointmentConfirmation/{appointmentId}")
+    public ResponseEntity appointmentConfirmation(
+            @PathVariable Long appointmentId,
+            @RequestBody AppointmentVerifyDTO appointmentVerifyDTO
+    ) {
+        try {
+            appointmentService.updateActivity(appointmentId, appointmentVerifyDTO);
+
+            responseDTO.setCode(VarList.RSP_SUCCESS);
+            responseDTO.setMessage("Success");
+            responseDTO.setContent(appointmentVerifyDTO);
+            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+        } catch (EntityNotFoundException e) {
+            responseDTO.setCode(VarList.RSP_DUPLICATED);
+            responseDTO.setMessage("Appointment not found");
+            responseDTO.setContent(appointmentVerifyDTO);
+            return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
+        } catch (Exception exception) {
+            responseDTO.setCode(VarList.RSP_ERROR);
+            responseDTO.setMessage(exception.getMessage());
+            responseDTO.setContent(null);
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

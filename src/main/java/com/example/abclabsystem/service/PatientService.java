@@ -1,6 +1,7 @@
 package com.example.abclabsystem.service;
 
 
+import com.example.abclabsystem.controller.MedicalReportController;
 import com.example.abclabsystem.dto.PatientDTO;
 import com.example.abclabsystem.entity.AuthenticationTokenPatient;
 import com.example.abclabsystem.entity.Patient;
@@ -12,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.transaction.Transactional;
 import java.security.NoSuchAlgorithmException;
@@ -75,4 +75,11 @@ public class PatientService {
             return VarList.RSP_ERROR;
         }
     }
+
+    public String findById(Long patientId) {
+
+        return "patientDTOList";
+    }
+
+
 }

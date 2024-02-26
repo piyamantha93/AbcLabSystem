@@ -12,14 +12,17 @@ public class AppointmentDTO {
     public AppointmentDTO() {
     }
 
-    public AppointmentDTO(String appointment_id, String patient_id, String name, String email, String test, String time, String date) {
-        this.appointment_id = appointment_id;
-        this.patient_id = patient_id;
-        this.name = name;
-        this.email = email;
-        this.test = test;
-        this.time = time;
-        this.date = date;
+//    public AppointmentDTO(String appointment_id, String patient_id, String name, String email, String test, String time, String date) {
+//        this.appointment_id = appointment_id;
+//        this.patient_id = patient_id;
+//        this.name = name;
+//        this.email = email;
+//        this.test = test;
+//        this.time = time;
+//        this.date = date;
+//    }
+
+    public AppointmentDTO(long appointmentId, String patientId, String name, String email, String test, String time, String date) {
     }
 
     public String getAppointment_id() {
@@ -76,5 +79,18 @@ public class AppointmentDTO {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "AppointmentDTO{" +
+                "appointment_id='" + appointment_id + '\'' +
+                ", patient_id='" + patient_id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", test='" + test + '\'' +
+                ", time='" + time + '\'' +
+                ", date='" + date + '\'' +
+                '}';
     }
 }
