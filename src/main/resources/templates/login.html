@@ -6,6 +6,8 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="login.css">
 </head>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/Signup.js"></script>
 <body>
 <div class="login-form">
     <form action="/submit-your-form" method="POST">
@@ -19,7 +21,7 @@
             <input type="password" id="password" name="password" required>
         </div>
         <div class="form-action">
-            <button type="Login">Login</button>
+            <button type="button" onclick="signIn()">Login</button>
         <p class="signup-link">Don't have an account? <a href="Register.html">Sign up</a></p>
         </div>
     </form>

@@ -26,7 +26,8 @@ public class AppointmentController {
 
 
     @PostMapping (value = "/saveAppointment")
-    public ResponseEntity saveAppointment(@RequestBody AppointmentDTO appointmentDTO){
+    public ResponseEntity saveAppointment(
+            @RequestBody AppointmentDTO appointmentDTO){
 
         try{
             String res = appointmentService.saveAppointment(appointmentDTO);
@@ -52,11 +53,11 @@ public class AppointmentController {
         catch (Exception exception){
             responseDTO.setCode(VarList.RSP_ERROR);
             responseDTO.setMessage(exception.getMessage());
-            responseDTO.setContent(null);
+
+           responseDTO.setContent(null);
             return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
     @GetMapping("/getAllAppointments")
     public ResponseEntity getAllAppointments() {
 

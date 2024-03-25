@@ -16,25 +16,22 @@ public class Appointment {
     private String patient_id;
     @Column(name = "name", length = 20)
     private String name;
-    @Column(name = "email", length = 20)
+    @Column(name = "email", length = 200)
     private String email;
     @Column(name = "test", length = 20)
     private String test;
-    @Column(name = "time", length = 20)
-    private String time;
-    @Column(name = "date", length = 20)
+      @Column(name = "date", length = 20)
     private String date;
 
     public Appointment() {
     }
 
-    public Appointment(long appointment_id, String patient_id, String name, String email, String test, String time, String date) {
+    public Appointment(long appointment_id, String patient_id, String name, String email, String test,  String date) {
         this.appointment_id = appointment_id;
         this.patient_id = patient_id;
         this.name = name;
         this.email = email;
         this.test = test;
-        this.time = time;
         this.date = date;
     }
 
@@ -78,15 +75,7 @@ public class Appointment {
         this.test = test;
     }
 
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getDate() {
+       public String getDate() {
         return date;
     }
 

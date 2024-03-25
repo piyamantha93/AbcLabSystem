@@ -6,6 +6,8 @@
     <title>Make an Appointment</title>
     <link rel="stylesheet" href="makeappointment.css">
 </head>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/MAPP.js"></script>
 <body>
 <div class="appointment-container">
     <h2>Make an Appointment</h2>
@@ -37,7 +39,7 @@
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
         </div>
-        <button type="submit" class="make-appointment-btn">Make Appointment</button>
+        <button type="button" class="make-appointment-btn" onclick="saveAppointment()">make appointment</button>
     </form>
 </div>
 </body>

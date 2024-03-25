@@ -1,44 +1,38 @@
 package com.example.abclabsystem.dto;
 
+import javax.persistence.*;
+
 public class AppointmentDTO {
-    private String appointment_id;
-    private String patient_id;
+
+
+    private String patientId;
+
     private String name;
+
     private String email;
-    private String test;
-    private String time;
+
+    private String testType;
+
     private String date;
 
+    // Default constructor
     public AppointmentDTO() {
     }
-
-//    public AppointmentDTO(String appointment_id, String patient_id, String name, String email, String test, String time, String date) {
-//        this.appointment_id = appointment_id;
-//        this.patient_id = patient_id;
-//        this.name = name;
-//        this.email = email;
-//        this.test = test;
-//        this.time = time;
-//        this.date = date;
-//    }
-
-    public AppointmentDTO(long appointmentId, String patientId, String name, String email, String test, String time, String date) {
+    // Constructor with parameters
+    public AppointmentDTO(String patientId, String name, String email, String testType, String date) {
+        this.patientId = patientId;
+        this.name = name;
+        this.email = email;
+        this.testType = testType;
+        this.date = date;
     }
 
-    public String getAppointment_id() {
-        return appointment_id;
+    public String getPatientId() {
+        return patientId;
     }
 
-    public void setAppointment_id(String appointment_id) {
-        this.appointment_id = appointment_id;
-    }
-
-    public String getPatient_id() {
-        return patient_id;
-    }
-
-    public void setPatient_id(String patient_id) {
-        this.patient_id = patient_id;
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
     }
 
     public String getName() {
@@ -57,20 +51,12 @@ public class AppointmentDTO {
         this.email = email;
     }
 
-    public String getTest() {
-        return test;
+    public String getTestType() {
+        return testType;
     }
 
-    public void setTest(String test) {
-        this.test = test;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+    public void setTestType(String testType) {
+        this.testType = testType;
     }
 
     public String getDate() {
@@ -81,16 +67,4 @@ public class AppointmentDTO {
         this.date = date;
     }
 
-    @Override
-    public String toString() {
-        return "AppointmentDTO{" +
-                "appointment_id='" + appointment_id + '\'' +
-                ", patient_id='" + patient_id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", test='" + test + '\'' +
-                ", time='" + time + '\'' +
-                ", date='" + date + '\'' +
-                '}';
-    }
 }

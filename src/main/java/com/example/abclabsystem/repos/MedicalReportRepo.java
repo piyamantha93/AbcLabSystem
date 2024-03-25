@@ -10,4 +10,5 @@ import java.util.stream.Collectors;
 public interface MedicalReportRepo extends JpaRepository<MedicalReport ,Long> {
     MedicalReport findBypatientId(Long patientId);
 
+    List<MedicalReport> findAllByPatientId(Long patientId);
 }

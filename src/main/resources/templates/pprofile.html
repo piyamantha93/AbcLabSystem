@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Patient Profile</title>
+    <title>Patient Panel</title>
     <link rel="stylesheet" href="pprofile.css">
 </head>
 <body>
-<div class="profile-container">
-    <div class="profile-header">
-        <div class="profile-picture-container">
-            <img src="image/fb.png" alt="Profile Picture" class="profile-picture">
-            <button onclick="editPicture()">Change Picture</button>
-        </div>
-        <h1 id="patientName">John Doe <span class="edit-icon" onclick="makeEditable('patientName')">✏️</span></h1>
-    </div>
-    <div class="profile-info">
-        <p id="patientID">Patient ID: <span>123456789</span> <span class="edit-icon" onclick="makeEditable('patientID')">✏️</span></p>
-        <p id="gender">Gender: <span>Male</span> <span class="edit-icon" onclick="makeEditable('gender', 'select', ['Male', 'Female', 'Other'])">✏️</span></p>
-        <p id="birthday">Birthday: <span>January 1, 1980</span> <span class="edit-icon" onclick="makeEditable('birthday', 'date')">✏️</span></p>
-        <p id="email">Email: <span>johndoe@example.com</span> <span class="edit-icon" onclick="makeEditable('email')">✏️</span></p>
-        <p id="phone">Phone: <span>+1234567890</span> <span class="edit-icon" onclick="makeEditable('phone')">✏️</span></p>
-    </div>
+<div class="sidebar">
+    <h2>Patient Dashboard</h2>
+    <a href="makeappointment.html">Make Appointments</a>
+    <a href="appointmenthis.html">Appointments History</a>
+    <a href="report.html">Medical Reports</a>
+    <a href="payment.html">Payment Methods</a>
+    <!-- Logout Link -->
+    <a href="logout.php" class="logout-btn">Logout</a>
 </div>
-<script src="script.js"></script>
+
+<div class="content">
+    <h3>Welcome To Dashboard</h3>
+</div>
 
 </body>
 </html>

@@ -13,11 +13,11 @@ public class Report {
     private long appointment_id;
     @Column(name = "patient_id", length = 20)
     private String patient_id;
-    @Column(name = "name", length = 20)
+    @Column(name = "name", length = 200)
     private String name;
     @Column(name = "test", length = 20)
     private String test;
-    @Column(name = "test_result", length = 20)
+    @Column(name = "test_result", length = 200)
     private String test_result;
     @Column(name = "lab_technicion", length = 20)
     private String lab_technician;

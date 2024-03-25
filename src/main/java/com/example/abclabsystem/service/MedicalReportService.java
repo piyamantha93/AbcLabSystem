@@ -52,10 +52,9 @@ public class MedicalReportService {
     }
 
 
-    public List<MedicalReport> getReportsByPatientId(Long patientId) {
-        return null;
+    public List<MedicalReport> findAllByPatientId(Long patientId) {
+        return medicalReportRepo.findAllByPatientId(patientId);
     }
-
 }
 
 

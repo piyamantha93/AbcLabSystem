@@ -8,7 +8,7 @@ body {
 }
 
 .sidebar {
-    background-color: #004d99;
+    background-color: #071b31;
     color: white;
     padding: 20px;
     width: 250px;
@@ -58,14 +58,16 @@ body {
 
 }
 
-button {
-    background-color: #007bff;
+.button {
+    background-color: #25e4ef;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    width: 80px;
 }
 
 button:hover {
