@@ -22,18 +22,10 @@ public class AdminController {
     private MedicalReportService medicalReportService;
 
 
+
+
+
 }
-//     View appointments list
-//
-//     Accept or Reject Appointment
-//
-//     Upload Medical Report
-//
-//     View Patient Profile
-//    @GetMapping("/patients/{patientId}")
-//    public String viewPatientProfile(@PathVariable Long patientId) {
-//        return patientService.findById(patientId);
-//    }
 
 
 

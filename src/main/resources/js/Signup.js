@@ -42,8 +42,7 @@ function signIn() {
         if (response.ok) {
             alert('Signed in successfully!');
         } else {
-            <a href="../templates/patientpanel.html">Log in</a>
-            alert('Signed in successfully!');
+
 
             // alert('Sign in failed!');
         }
