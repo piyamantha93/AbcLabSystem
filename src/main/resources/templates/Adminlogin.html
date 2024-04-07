@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/AdminLogin.js"></script>
+
+<body>
+<div class="login-form">
+  <form action="/submit-your-form" method="POST">
+    <h2>Login Now</h2>
+
+    <div class="input-group">
+      <label for="loginUsername">Username</label>
+      <input type="text" id="loginUsername" name="username" required>
+    </div>
+    <div class="input-group">
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" name="password" required>
+    </div>
+    <div class="form-action">
+      <button type="button" onclick="adminLogin()">Login</button>
+      <p class="signup-link">Don't have an account? <a href="Register.html">Sign up</a></p>
+    </div>
+  </form>
+</div>
+</body>
+</html>

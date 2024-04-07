@@ -5,46 +5,60 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+
 @Entity
 public class Admin {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    private String email;
-
+    private Long id;
+    private String fullName;
+    private String gender;
+    private String birthday;
+    private String username;
     private String password;
-
-    private String role;
-
-    private String fName;
 
     public Admin() {
     }
 
-    public Admin(String email, String password, String gender, String fName) {
-        this.id = id;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-        this.fName = fName;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -55,19 +69,15 @@ public class Admin {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
-    }
+    public Admin(Long id, String fullName, String gender, String birthday, String username, String password) {
+        this.id = id;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.username = username;
+        this.password = password;
 
-    public void setRole(String gender) {
-        this.role = gender;
-    }
 
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
     }
 }
+

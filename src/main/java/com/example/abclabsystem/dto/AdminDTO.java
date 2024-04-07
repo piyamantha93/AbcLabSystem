@@ -1,41 +1,53 @@
 package com.example.abclabsystem.dto;
 
 public class AdminDTO {
-    private long id;
-
-    private String email;
-
+    private String fullName;
+    private String gender;
+    private String birthday;
+    private String username;
     private String password;
-
-    private String role;
-
-    private String fName;
 
     public AdminDTO() {
     }
 
-    public AdminDTO(long id, String email, String password, String gender, String fName) {
-        this.id = id;
-        this.email = email;
+    public AdminDTO(String fullName, String gender, String birthday, String username, String password) {
+        this.fullName = fullName;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.username = username;
         this.password = password;
-        this.role = role;
-        this.fName = fName;
     }
 
-    public long getId() {
-        return id;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getGender() {
+        return gender;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -44,21 +56,5 @@ public class AdminDTO {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String gender) {
-        this.role = gender;
-    }
-
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
     }
 }
