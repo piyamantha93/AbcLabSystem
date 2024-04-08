@@ -23,7 +23,6 @@ public class AppointmentRepoTests {
         appointment.setName("tharindu");
         appointment.setEmail("tharindu@gmail.com");
         appointment.setTest("test");
-        appointment.setTime("08:40");
         appointment.setDate("2024.02.27");
 
         Appointment savedAppointment = repo.save(appointment);

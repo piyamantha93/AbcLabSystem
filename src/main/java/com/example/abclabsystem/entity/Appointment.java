@@ -82,4 +82,6 @@ public class Appointment {
     public void setDate(String date) {
         this.date = date;
     }
+
+
 }

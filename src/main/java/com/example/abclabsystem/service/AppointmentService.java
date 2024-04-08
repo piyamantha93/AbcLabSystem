@@ -69,5 +69,6 @@ public class AppointmentService {
                 .orElseThrow(() -> new EntityNotFoundException("Appointment not found with ID: " + appointmentId));
 
 
+        }
     }
-}
+
