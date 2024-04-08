@@ -67,4 +67,6 @@ public class MedicalReportDTO {
     public void setpdfContent(byte[] getPdfContent) {this.pdfContent = pdfContent;}
 
 
+    public void setReportDate(String date) {
+    }
 }
